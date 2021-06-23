@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Networks</title>
+    <link rel= "stylesheet" href= "CNstyle.css">
+
+</head>
+<body>
+    <h1>Chapter 1</h1>
+    <h3>Objectives</h3>
+    
+    <p><li>The idea of multiple layering in data communication and networking.</li>
+    <li>The OSI model and its layer architecture.</li>
+    <li>The functions of each layer in the OSI model.</li>
+    </p>
+    
+    <h3>Protocol Layers</h3>
+    
+    <li>Set of Rules.</li>
+    <li>Needed for Communication.</li>
+    <li>When communication is complex, it is divided into several.layers.</li> 
+    <li>In this case we may need several protocols for each layer.</li>
+    <li>For this let us see two examples.</li>
+
+    <h3>Example-1</h3>
+    <p>Assume Maria and Ann are neighbors with a lot of common ideas. However, Maria speaks only Spanish, and Ann speaks only English. Since both have learned the sign language in their childhood, they enjoy meeting in a cafe a couple of days per week and exchange their ideas using signs.
+    </p>
+    <img src="example1.png" height="50">
+
+    <h3>Example-2</h3>
+    <p>Now assume that Ann has to move to another town because of her job. Before she moves, the two meet for the last time. Maria surprises Ann when she opens a packet that contains two small machines. The first machine can scan and transform a letter in English to a secret code or vice versa.
+    </p>
+    <img src="example2.png" height="300" width="600">
+    </p>
+
+    <h3>The OSI Model</h3>
+    <li>Established in 1947. (Open System Interconnection)</li>
+    <li>By the <i>International Standards Organization (ISO)</i>.</li>
+    <li>Worldwide agreement on international standards.</li>
+    <li>Three-fourths of countries in the world are represented in the ISO.</li>
+    <li>An ISO standard that covers all aspects of network
+    communications is the <i>Open Systems Interconnection (OSI) model.</i></li>
+    <li>Introduced in late 1970’s.</li>
+    <br>
+    <img src="OSI Model.png" height="250">
+    <img src="OSI Model2.png" height="250">
+    
+    <br>
+    <h3>Working</h3>
+    <li>Layers 1, 2, 3 are the <i>network support layers.</i></li>
+    <li>They deal with the physical aspects of moving data from one device to another.</li>
+    <li>Layers 5, 6, 7 are the <i>user support layers.</i></li>
+    <li>They deal with exchange and use of information among unrelated
+    software systems.</li>
+    <li>Layer 4 provides links to the two subgroups and ensures that what the lower layers have transmitted is in a form that the upper layers can use it.</li>
+    <li>Upper Layer generally comprises of software, where as lower layer comprises of hardware & software.</li>
+    <li>Except physical Layer.</li>
+
+    <br>
+    <h3>How does data exchange takes place</h3>
+    <li>The data flow starts from Layer 7 (Application) & goes down to the Layer 1 (Physical).</li>
+    <li>This flow is sequential & descending.</li>
+    <li>At each layer, header gets added to the data unit.</li>
+    <li>When it passes through physical layer it gets converted to EM signal.</li>
+    <li>This is transmitted using physical link to the receiver.
+    <li>Reverse process takes place at destination, i.e. the added header & trailers gets removed from the data unit while passing through each layers.</li>
+    <li>Hence the data is made available in its original form when it reaches to layer 7.</li>
+    
+    <br>
+    <h3>Individual working of layers in OSI Model</h3>
+    <h4>Physical Layer</h4>
+    <li> Type of transmission media. (defines charac’s of interface between devices & Tx Media).</li>
+    <li>Representation of bits. ( stream of bits 0’s & 1’s must be encoded to Elec/optical Sgnls type of encoding).</li>
+    <li>Data Rate. (Defines the duration of bits)</li>
+    <li>Synch of bits. (Tx & Rx must be sync)</li>
+    <li>Line configuration. (Connected through dedicated link/sharing link)</li>
+    <li>Physical Topology. (Mesh, Star, Ring, Bus)</li>
+    <li>Transmission mode. (SDx, HDx, FDx)</li>
+
+    <br>
+    <h4>Data Link Layer</h4>
+    <li> Framing. (Large data is sectioned into frames)
+    </li>
+    <li>Physical Addressing (Header is added = Address of receiver)
+    </li>
+    <li>Flow control. (Prevents overloading of data)</li>
+    <li>Error control. (Detect, Re-Tx, lost/damaged frames, adds Trailer to frames at the end)</li>
+    <li>Access control. (Which device has the control over the link)</li>
+ 
+    <br>
+    <h4>Network Layer</h4>
+    <li>Logical addressing. (The network layer adds a header to the packet)</li>
+    <li>Routing. (Internetworks Routes or switch pkts to destination)</li>
+
+    <br>
+    <h4>Transport Layer</h4>
+    <li>Service-point addressing. (service-point address/port address) is added)</li>
+    <li>Segmentation and reassembly. (Msg in segments, each having sequence number, helps in reassembling @ Rx, make & break connection)</li>
+    <li>Flow control. (Flow control of data at the end of layer)</li>
+    <li>Error control. (Msg arrives at the Rx without any errors, Correction is done by Re-Tx)</li>
+
+    <br>
+    <h4>Session Layer</h4>
+    <li>Dialog control. (Establishes, maintains, and synchronizes the interaction between communicating systems, also decides the modes HDX,FDX)</li>
+    <li>Synchronization.</li>
+
+    <br>
+    <h4>Presentation Layer (Syntax & Semantics Branch which studies meaning of  words)</h4>
+    <li>Translation.</li>
+    <li>Encryption.</li>
+    <li>Compression.</li>
+
+    <br>
+    <h4>Application Layer</h4>
+    <li>Network virtual terminal (is a S/Wr version of physical terminal, allows remote access, PC communicates with S/Wr terminal, in turn talks to host & vice versa)</li>
+    <li>File transfer, access, and management (Allows access to host from remote to make changes or read, manage, control files from local computer)</li>
+</body>
+</html>
